@@ -74,13 +74,13 @@
         }
       }
     },
-    "/{resourceUri}/providers/microsoft.insights/generatelivetoken": {
-      "post": {
+    "/{resourceUri}/providers/microsoft.insights/profilertoken": {
+      "get": {
         "tags": [
-          "LiveToken"
+          "ProfilerToken"
         ],
         "operationId": "LiveToken_Get",
-        "description": "**Gets an access token for live metrics stream data.**",
+        "description": "**Gets an readonly access token for application insights profiler data.**",
         "parameters": [
           {
             "$ref": "#/parameters/ResourceUriParameter"
@@ -97,9 +97,9 @@
             }
           },
           "200": {
-            "description": "Successful response containing the live metrics stream token.",
+            "description": "Successful response containing the application insights profiler token.",
             "schema": {
-              "$ref": "#/definitions/LiveTokenResponse"
+              "$ref": "#/definitions/ProfilerTokenResponse"
             },
             "examples": {
               "application/json": {
@@ -110,20 +110,58 @@
         },
         "x-ms-examples": {
           "Get live token for resource": {
-            "$ref": "./examples/LiveTokenGet.json"
+            "$ref": "./examples/ProfilerTokenGetAndPost.json"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ProfilerToken"
+        ],
+        "operationId": "LiveToken_Post",
+        "description": "**Gets an readwrite access token for application insights profiler data.**",
+        "parameters": [
+          {
+            "$ref": "#/parameters/ResourceUriParameter"
+          },
+          {
+            "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/ApiVersionParameter"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "Error response describing why the operation failed.",
+            "schema": {
+              "$ref": "../2020-03-01-preview/componentLinkedStorageAccounts_API.json#/definitions/ErrorResponse"
+            }
+          },
+          "200": {
+            "description": "Successful response containing the application insights profiler token.",
+            "schema": {
+              "$ref": "#/definitions/ProfilerTokenResponse"
+            },
+            "examples": {
+              "application/json": {
+                "liveToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+              }
+            }
+          }
+        },
+        "x-ms-examples": {
+          "Get live token for resource": {
+            "$ref": "./examples/ProfilerTokenGetAndPost.json"
           }
         }
       }
     }
   },
   "definitions": {
-    "LiveTokenResponse": {
+    "ProfilerTokenResponse": {
       "type": "object",
       "properties": {
-        "liveToken": {
+        "token": {
           "type": "string",
-          "description": "JWT token for accessing live metrics stream data.",
-          "readOnly": true
+          "description": "JWT token for accessing live metrics stream data."
         }
       },
       "description": "The response to a live token query."
