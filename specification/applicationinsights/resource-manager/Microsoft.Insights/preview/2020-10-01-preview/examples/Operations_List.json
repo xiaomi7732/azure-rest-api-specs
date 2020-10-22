@@ -7,12 +7,12 @@
       "body": {
         "value": [
           {
-            "name": "microsoft.insights/generatelivetoken",
+            "name": "microsoft.insights/profilerToken",
             "display": {
-              "provider": "Microsoft Container Instance",
-              "resource": "generatelivetoken",
-              "operation": "Gets an access token for live metrics stream data",
-              "description": "Gets an access token for live metrics stream data"
+              "provider": "Microsoft Application Insights",
+              "resource": "profilerToken",
+              "operation": "Gets an access token for application insights profiler data",
+              "description": "Gets an access token for application insights profiler data"
             },
             "origin": "User"
           }
