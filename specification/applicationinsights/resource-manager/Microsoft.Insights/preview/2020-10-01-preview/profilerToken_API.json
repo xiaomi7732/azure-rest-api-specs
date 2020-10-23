@@ -109,7 +109,7 @@
           }
         },
         "x-ms-examples": {
-          "Get live token for resource": {
+          "Get profiler token for resource": {
             "$ref": "./examples/ProfilerTokenGetAndPost.json"
           }
         }
@@ -148,7 +148,7 @@
           }
         },
         "x-ms-examples": {
-          "Get live token for resource": {
+          "Get profiler token for resource": {
             "$ref": "./examples/ProfilerTokenGetAndPost.json"
           }
         }
@@ -161,10 +161,10 @@
       "properties": {
         "token": {
           "type": "string",
-          "description": "JWT token for accessing live metrics stream data."
+          "description": "JWT token for accessing application insights profiler data."
         }
       },
-      "description": "The response to a live token query."
+      "description": "The response to a profiler token query."
     },
     "OperationsListResult": {
       "description": "Result of the List Operations operation",

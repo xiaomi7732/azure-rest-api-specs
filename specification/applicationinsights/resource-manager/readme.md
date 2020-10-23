@@ -128,15 +128,26 @@ input-file:
   - Microsoft.Insights/preview/2018-05-01-preview/components_API.json
   - Microsoft.Insights/preview/2020-03-01-preview/componentLinkedStorageAccounts_API.json
   - Microsoft.Insights/preview/2020-06-02-preview/livetoken_API.json
-  - Microsoft.Insights/preview/2020-06-02-preview/profilerToken_API.json
+  - Microsoft.Insights/preview/2020-10-01-preview/profilerToken_API.json
 ```
+
+### Tag: package-preview-2020-10-only
+
+These settings apply only when `--tag=package-preview-2020-10-only` is specified on the command line.
+
+``` yaml $(tag) == 'package-preview-2020-10-only'
+input-file:
+  - Microsoft.Insights/preview/2020-10-01-preview/profilerToken_API.json
+```
+
+
 ### Tag: package-preview-2020-06-only
 
 These settings apply only when `--tag=package-preview-2020-06-only` is specified on the command line.
 
 ``` yaml $(tag) == 'package-preview-2020-06-only'
 input-file:
-  - Microsoft.Insights/preview/2020-06-02-preview/profilerToken_API.json
+  - Microsoft.Insights/preview/2020-06-02-preview/livetoken_API.json
 ```
 
 ### Tag: package-preview-2020-06
