@@ -79,7 +79,7 @@
         "tags": [
           "ProfilerToken"
         ],
-        "operationId": "LiveToken_Get",
+        "operationId": "profilertoken_GET",
         "description": "**Gets an readonly access token for application insights profiler data.**",
         "parameters": [
           {
@@ -118,7 +118,7 @@
         "tags": [
           "ProfilerToken"
         ],
-        "operationId": "LiveToken_Post",
+        "operationId": "profilertoken",
         "description": "**Gets an readwrite access token for application insights profiler data.**",
         "parameters": [
           {
