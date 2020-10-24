@@ -105,6 +105,14 @@ directive:
     reason: 'delete API returns empty response and is already part of the previous api, cannot change it'
 ```
 
+### Tag: package-preview-2020-10-only
+
+These settings apply only when `--tag=package-preview-2020-10-only` is specified on the command line.
+
+``` yaml $(tag) == 'package-preview-2020-10-only'
+input-file:
+  - Microsoft.Insights/preview/2020-10-01-preview/profilerToken_API.json
+```
 
 ### Tag: package-preview-2020-10
 
@@ -130,16 +138,6 @@ input-file:
   - Microsoft.Insights/preview/2020-06-02-preview/livetoken_API.json
   - Microsoft.Insights/preview/2020-10-01-preview/profilerToken_API.json
 ```
-
-### Tag: package-preview-2020-10-only
-
-These settings apply only when `--tag=package-preview-2020-10-only` is specified on the command line.
-
-``` yaml $(tag) == 'package-preview-2020-10-only'
-input-file:
-  - Microsoft.Insights/preview/2020-10-01-preview/profilerToken_API.json
-```
-
 
 ### Tag: package-preview-2020-06-only
 
