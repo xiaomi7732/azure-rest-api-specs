@@ -112,8 +112,17 @@ These settings apply only when `--tag=package-preview-2020-10` is specified on t
 
 ```yaml $(tag) == 'package-preview-2020-10'
 input-file:
+  - Microsoft.Insights/preview/2020-10-26-preview/webTests_API.json
+```
+### Tag: package-preview-2020-10
+
+These settings apply only when `--tag=package-preview-2020-10` is specified on the command line.
+
+``` yaml $(tag) == 'package-preview-2020-10'
+input-file:
   - Microsoft.Insights/preview/2020-10-05-preview/webTests_API.json
 ```
+
 ### Tag: package-preview-2020-06-only
 
 These settings apply only when `--tag=package-preview-2020-06-only` is specified on the command line.
